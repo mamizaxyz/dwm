@@ -97,6 +97,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      		spawn,          SHCMD("sysact") },
 	{ MODKEY|ShiftMask,             XK_v,      		spawn,          SHCMD("vpntoggle") },
 	{ MODKEY,             		XK_v,      		spawn,          SHCMD("virtualbox") },
+	{ MODKEY,             		XK_o,      		spawn,          SHCMD("obs") },
 	{ MODKEY,             		XK_g,      		spawn,          SHCMD("thunar") },
 	{ MODKEY|ShiftMask, 		XK_w,  			spawn,          SHCMD(TERMINAL " -e nmtui") },
 	{ MODKEY,             		XK_grave,  		togglescratch, 	{ .v = scratchpadcmd } },
