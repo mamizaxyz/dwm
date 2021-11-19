@@ -90,7 +90,7 @@ static Key keys[] = {
 	{ 0, 				XK_Print,  		spawn,          SHCMD("scrot $HOME/pix/$(date '+%y%m%d-%H%M-%S').png") },
 	{ ShiftMask, 			XK_Print,  		spawn,          SHCMD("scrot -s $HOME/pix/$(date '+%y%m%d-%H%M-%S').png") },
 	{ MODKEY|ShiftMask,             XK_x,  			spawn,          SHCMD("setbg $HOME/.local/share/backgrounds") },
-	{ MODKEY|ShiftMask,             XK_period, 		spawn,       	SHCMD("switchxkbmap") },
+	{ MODKEY|ShiftMask,             XK_period, 		spawn,       	SHCMD("switchxkbmap; kill -49 $(pidof dwmblocks)") },
 	{ MODKEY,             		XK_u,  			spawn,          SHCMD("dmenuunicode") },
 	{ MODKEY,             		XK_BackSpace,  		spawn,          SHCMD("sysact") },
 	{ MODKEY|ShiftMask, 		XK_BackSpace,  		spawn,          SHCMD("sysact") },
