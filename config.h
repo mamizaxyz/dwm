@@ -16,11 +16,11 @@ static const int smartgaps          		= 0;        /* 1 means no outer gap when t
 static const int showbar            		= 1;        /* 0 means no bar */
 static const int topbar            		= 1;        /* 0 means bottom bar */
 static const char *fonts[]          		= { "Mononoki:size=10", "Vazir:size=10", "JoyPixels:pixelsize=14:antialias=true:autohint=true" };
-static const char col_gray1[]       		= "#222222";
-static const char col_gray2[]       		= "#444444";
-static const char col_gray3[]       		= "#bbbbbb";
-static const char col_gray4[]       		= "#eeeeee";
-static const char col_cyan[]        		= "#005577";
+static const char col_gray1[]       		= "#282a36";
+static const char col_gray2[]       		= "#1a1a1a";
+static const char col_gray3[]       		= "#f8f8f2";
+static const char col_gray4[]       		= "#282a36";
+static const char col_cyan[]        		= "#bf93f9";
 static const char *colors[][3]      		= {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -37,7 +37,9 @@ static const Rule rules[] = {
 	 */
 	/* class      		instance    title       	tags mask     isfloating  isterminal  noswallow  monitor */
 	{ "Galculator", 	NULL,       NULL,       	0,            1,	  0,	      0,         -1 },
+	{ "TelegramDesktop", 	NULL,       NULL,       	0,            1,	  0,	      0,         -1 },
 	{ TERMCLASS,		NULL,       NULL,     		0,            0,	  1,	      0,         -1 },
+	{ "Alacritty", 	        NULL,       NULL,       	0,            0,	  1,	      0,         -1 },
 	{ NULL, 		NULL,       "Event Tester",     0,            0,	  0,	      1,         -1 },
 };
 
