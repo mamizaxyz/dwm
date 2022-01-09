@@ -77,8 +77,8 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 
 static Key keys[] = {
 	/* modifier                     key        		function        argument */
-	{ MODKEY,                       XK_d,      		spawn,          {.v = dmenucmd } },
-	{ MODKEY,             		XK_Return, 		spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_d,      		spawn,          { .v = dmenucmd } },
+	{ MODKEY,             		XK_Return, 		spawn,          { .v = termcmd } },
 	{ MODKEY, 			XK_w,  			spawn,          SHCMD("$BROWSER") },
 	{ MODKEY, 			XK_equal,   		spawn,          SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask, 		XK_equal,   		spawn,          SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
@@ -92,7 +92,7 @@ static Key keys[] = {
 	{ 0, 				XK_Print,  		spawn,          SHCMD("scrot $HOME/pix/$(date '+%y%m%d-%H%M-%S').png") },
 	{ ShiftMask, 			XK_Print,  		spawn,          SHCMD("scrot -s $HOME/pix/$(date '+%y%m%d-%H%M-%S').png") },
 	{ MODKEY|ShiftMask,             XK_x,  			spawn,          SHCMD("setbg $HOME/.local/share/backgrounds") },
-	{ MODKEY|ShiftMask,             XK_period, 		spawn,       	SHCMD("switchxkbmap; kill -49 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,             XK_slash, 		spawn,       	SHCMD("switchxkbmap; kill -49 $(pidof dwmblocks)") },
 	{ MODKEY,             		XK_u,  			spawn,          SHCMD("dmenuunicode") },
 	{ MODKEY,             		XK_BackSpace,  		spawn,          SHCMD("sysact") },
 	{ MODKEY|ShiftMask, 		XK_BackSpace,  		spawn,          SHCMD("sysact") },
@@ -122,18 +122,18 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_a,      		defaultgaps,    {0} },
 	{ MODKEY,                       XK_Tab,    		view,           {0} },
 	{ MODKEY,             		XK_q,      		killclient,     {0} },
-	{ MODKEY,                       XK_t,      		setlayout,      {.v = &layouts[0]} },
-	{ MODKEY|ShiftMask,             XK_f,      		setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_t,      		setlayout,      { .v = &layouts[0] } },
+	{ MODKEY|ShiftMask,             XK_f,      		setlayout,      { .v = &layouts[1] } },
 	{ MODKEY,   		        XK_f,      		togglefullscr,  {0} },
-	{ MODKEY,                       XK_m,      		setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_m,      		setlayout,      { .v = &layouts[2] } },
 	{ MODKEY,                       XK_space,  		setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  		togglefloating, {0} },
-	{ MODKEY,                       XK_0,      		view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,      		tag,            {.ui = ~0 } },
-	{ MODKEY,                       XK_comma,  		focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_period, 		focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_comma,  		tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period, 		tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_0,      		view,           { .ui = ~0 } },
+	{ MODKEY|ShiftMask,             XK_0,      		tag,            { .ui = ~0 } },
+	{ MODKEY,                       XK_comma,  		focusmon,       { .i = -1 } },
+	{ MODKEY,                       XK_period, 		focusmon,       { .i = +1 } },
+	{ MODKEY|ShiftMask,             XK_comma,  		tagmon,         { .i = -1 } },
+	{ MODKEY|ShiftMask,             XK_period, 		tagmon,         { .i = +1 } },
 	TAGKEYS(                        XK_1,                      		0)
 	TAGKEYS(                        XK_2,                      		1)
 	TAGKEYS(                        XK_3,                      		2)
