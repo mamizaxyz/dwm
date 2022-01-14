@@ -79,6 +79,7 @@ static Key keys[] = {
 	/* modifier                     key        		function        argument */
 	{ MODKEY,                       XK_d,      		spawn,          { .v = dmenucmd } },
 	{ MODKEY,             		XK_Return, 		spawn,          { .v = termcmd } },
+	{ MODKEY,             		XK_e, 		        spawn,          SHCMD("emacs") },
 	{ MODKEY, 			XK_w,  			spawn,          SHCMD("$BROWSER") },
 	{ MODKEY, 			XK_equal,   		spawn,          SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask, 		XK_equal,   		spawn,          SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
