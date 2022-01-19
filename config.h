@@ -95,6 +95,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_x,  			spawn,          SHCMD("setbg $HOME/.local/share/backgrounds") },
 	{ MODKEY|ShiftMask,             XK_slash, 		spawn,       	SHCMD("switchxkbmap; kill -49 $(pidof dwmblocks)") },
 	{ MODKEY,             		XK_u,  			spawn,          SHCMD("dmenuunicode") },
+	{ MODKEY,             		XK_backslash,  		spawn,          SHCMD("dmenuman") },
 	{ MODKEY,             		XK_BackSpace,  		spawn,          SHCMD("sysact") },
 	{ MODKEY|ShiftMask, 		XK_BackSpace,  		spawn,          SHCMD("sysact") },
 	{ MODKEY|ShiftMask,             XK_q,      		spawn,          SHCMD("sysact") },
