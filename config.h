@@ -154,6 +154,7 @@ static Key keys[] = {
 	{ 0, XF86XK_TouchpadToggle,  	spawn,          	SHCMD("(synclient | grep 'TouchpadOff.*1' && synclient TouchpadOff=0) || synclient TouchpadOff=1") },
 	{ 0, XF86XK_Calculator,  	spawn,          	SHCMD("galculator") },
 	{ 0, XF86XK_HomePage,  		spawn,          	SHCMD("thunar") },
+	#include "farsikeys.h"
 };
 
 /* button definitions */
