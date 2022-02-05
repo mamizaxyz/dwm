@@ -75,25 +75,28 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 
 #include <X11/XF86keysym.h>
 
+#define XK_NO_MOD 0
+
 static Key keys[] = {
 	/* modifier                     key        		function        argument */
 	{ MODKEY,                       XK_d,      		spawn,          { .v = dmenucmd } },
 	{ MODKEY,             		XK_Return, 		spawn,          { .v = termcmd } },
 	{ MODKEY,             		XK_e, 		        spawn,          SHCMD("emacs") },
 	{ MODKEY, 			XK_w,  			spawn,          SHCMD("$BROWSER") },
-	{ MODKEY, 			XK_equal,   		spawn,          SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY, 			XK_equal,   		spawn,          SHCMD("pamixer --allow-boost -i 5;  kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask, 		XK_equal,   		spawn,          SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY, 			XK_minus,   		spawn,          SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY, 			XK_minus,   		spawn,          SHCMD("pamixer --allow-boost -d 5;  kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask, 		XK_minus,   		spawn,          SHCMD("pamixer --allow-boost -d 15; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY|ShiftMask, 		XK_m,   		spawn,          SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask, 		XK_m,   		spawn,          SHCMD("pamixer -t;                  kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_bracketright,    	spawn,          SHCMD("xbacklight -inc 10") },
 	{ MODKEY,			XK_bracketleft,    	spawn,          SHCMD("xbacklight -dec 10") },
 	{ MODKEY|ShiftMask,		XK_bracketright,    	spawn,          SHCMD("xbacklight -inc 25") },
 	{ MODKEY|ShiftMask,		XK_bracketleft,    	spawn,          SHCMD("xbacklight -dec 25") },
-	{ 0, 				XK_Print,  		spawn,          SHCMD("scrot $HOME/pix/$(date '+%y%m%d-%H%M-%S').png") },
+	{ XK_NO_MOD, 			XK_Print,  		spawn,          SHCMD("scrot    $HOME/pix/$(date '+%y%m%d-%H%M-%S').png") },
 	{ ShiftMask, 			XK_Print,  		spawn,          SHCMD("scrot -s $HOME/pix/$(date '+%y%m%d-%H%M-%S').png") },
-	{ MODKEY|ShiftMask,             XK_x,  			spawn,          SHCMD("setbg $HOME/.local/share/backgrounds") },
+	{ MODKEY|ShiftMask,             XK_x,  			spawn,          SHCMD("setbg    $HOME/.local/share/backgrounds") },
 	{ MODKEY|ShiftMask,             XK_slash, 		spawn,       	SHCMD("switchxkbmap; kill -49 $(pidof dwmblocks)") },
+	/*{ XK_NO_MOD,                    XK_Caps_Lock, 	        spawn,       	SHCMD("kill -45 $(pidof dwmblocks)") },*/
 	{ MODKEY,             		XK_u,  			spawn,          SHCMD("dmenuunicode") },
 	{ MODKEY,             		XK_backslash,  		spawn,          SHCMD("dmenuman") },
 	{ MODKEY,             		XK_BackSpace,  		spawn,          SHCMD("sysact") },
@@ -146,14 +149,14 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      		6)
 	TAGKEYS(                        XK_8,                      		7)
 	TAGKEYS(                        XK_9,                      		8)
-	{ 0, XF86XK_AudioMute,      	spawn,          	SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioRaiseVolume,   spawn,          	SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioLowerVolume,   spawn,          	SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_MonBrightnessUp,    spawn,          	SHCMD("xbacklight -inc 10") },
-	{ 0, XF86XK_MonBrightnessDown,  spawn,          	SHCMD("xbacklight -dec 10") },
-	{ 0, XF86XK_TouchpadToggle,  	spawn,          	SHCMD("(synclient | grep 'TouchpadOff.*1' && synclient TouchpadOff=0) || synclient TouchpadOff=1") },
-	{ 0, XF86XK_Calculator,  	spawn,          	SHCMD("galculator") },
-	{ 0, XF86XK_HomePage,  		spawn,          	SHCMD("thunar") },
+	{ XK_NO_MOD, XF86XK_AudioMute,      	spawn,          	SHCMD("pamixer -t;                 kill -44 $(pidof dwmblocks)") },
+	{ XK_NO_MOD, XF86XK_AudioRaiseVolume,   spawn,          	SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
+	{ XK_NO_MOD, XF86XK_AudioLowerVolume,   spawn,          	SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
+	{ XK_NO_MOD, XF86XK_MonBrightnessUp,    spawn,          	SHCMD("xbacklight -inc 10") },
+	{ XK_NO_MOD, XF86XK_MonBrightnessDown,  spawn,          	SHCMD("xbacklight -dec 10") },
+	{ XK_NO_MOD, XF86XK_TouchpadToggle,  	spawn,          	SHCMD("(synclient | grep 'TouchpadOff.*1' && synclient TouchpadOff=0) || synclient TouchpadOff=1") },
+	{ XK_NO_MOD, XF86XK_Calculator,  	spawn,          	SHCMD("galculator") },
+	{ XK_NO_MOD, XF86XK_HomePage,  		spawn,          	SHCMD("thunar") },
 	#include "farsikeys.h"
 };
 
@@ -162,12 +165,12 @@ static Key keys[] = {
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 #ifndef __OpenBSD__
-	{ ClkWinTitle,		0,		Button2,	zoom,		{0} },
-	{ ClkStatusText,	0,		Button1,	sigdwmblocks,	{.i = 1} },
-	{ ClkStatusText,	0,		Button2,	sigdwmblocks,	{.i = 2} },
-	{ ClkStatusText,	0,		Button3,	sigdwmblocks,	{.i = 3} },
-	{ ClkStatusText,	0,		Button4,	sigdwmblocks,	{.i = 4} },
-	{ ClkStatusText,	0,		Button5,	sigdwmblocks,	{.i = 5} },
+	{ ClkWinTitle,		XK_NO_MOD,		Button2,	zoom,		{0} },
+	{ ClkStatusText,	XK_NO_MOD,		Button1,	sigdwmblocks,	{.i = 1} },
+	{ ClkStatusText,	XK_NO_MOD,		Button2,	sigdwmblocks,	{.i = 2} },
+	{ ClkStatusText,	XK_NO_MOD,		Button3,	sigdwmblocks,	{.i = 3} },
+	{ ClkStatusText,	XK_NO_MOD,		Button4,	sigdwmblocks,	{.i = 4} },
+	{ ClkStatusText,	XK_NO_MOD,		Button5,	sigdwmblocks,	{.i = 5} },
 	{ ClkStatusText,	ShiftMask,	Button1,	sigdwmblocks,	{.i = 6} },
 #endif
 	{ ClkStatusText,	ShiftMask,	Button3,	spawn,		SHCMD(TERMINAL " -e nvim ~/.local/src/dwmblocks/config.h ") },
@@ -176,13 +179,13 @@ static Button buttons[] = {
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
 	{ ClkClientWin,         MODKEY,         Button4,        incrgaps,	{.i = +1} },
 	{ ClkClientWin,         MODKEY,         Button5,        incrgaps,	{.i = -1} },
-	{ ClkTagBar,            0,              Button1,        view,           {0} },
-	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
+	{ ClkTagBar,            XK_NO_MOD,              Button1,        view,           {0} },
+	{ ClkTagBar,            XK_NO_MOD,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
-	/*{ ClkTagBar,            0,              Button4,        shiftview,      {.i = -1} },
-	{ ClkTagBar,            0,              Button5,        shiftview,      {.i = 1} },*/
-	{ ClkRootWin,           0,              Button2,        togglebar,      {0} },
+	/*{ ClkTagBar,            XK_NO_MOD,              Button4,        shiftview,      {.i = -1} },
+	{ ClkTagBar,            XK_NO_MOD,              Button5,        shiftview,      {.i = 1} },*/
+	{ ClkRootWin,           XK_NO_MOD,              Button2,        togglebar,      {0} },
 
 };
 
