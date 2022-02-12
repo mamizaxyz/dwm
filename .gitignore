@@ -1,2 +1,5 @@
 *.o
+*.orig
+*.rej
+*.diff
 dwm
