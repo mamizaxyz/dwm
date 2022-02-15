@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* Constants */
-#define TERMINAL "st"
-#define TERMCLASS "st"
+#define TERMINAL "alacritty"
+#define TERMCLASS "Alacritty"
 
 /* appearance */
 static const unsigned int borderpx  		= 1;        /* border pixel of windows */
@@ -39,7 +39,7 @@ static const Rule rules[] = {
 	{ "Galculator", 	NULL,       NULL,       	0,            1,	  0,	      0,         -1 },
 	{ "TelegramDesktop", 	NULL,       NULL,       	0,            1,	  0,	      0,         -1 },
 	{ TERMCLASS,		NULL,       NULL,     		0,            0,	  1,	      0,         -1 },
-	{ "Alacritty", 	        NULL,       NULL,       	0,            0,	  1,	      0,         -1 },
+	{ "st", 	        NULL,       NULL,       	0,            0,	  1,	      0,         -1 },
 	{ NULL, 		NULL,       "Event Tester",     0,            0,	  0,	      1,         -1 },
 };
 
@@ -69,9 +69,9 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "-g", "120x34", NULL };
 
 #include <X11/XF86keysym.h>
 
