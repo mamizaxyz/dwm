@@ -1947,12 +1947,14 @@ tile(Monitor *m)
 			r = MIN(n, m->nmaster) - i;
 			h = (m->wh - my - m->gappoh*oe - m->gappih*ie * (r - 1)) / r;
 			resize(c, m->wx + m->gappov*oe, m->wy + my, mw - (2*c->bw) - m->gappiv*ie, h - (2*c->bw), 0);
-			my += HEIGHT(c) + m->gappih*ie;
+			if (my + HEIGHT(c) < m->wh)
+				my += HEIGHT(c) + m->gappih*ie;
 		} else {
 			r = n - i;
 			h = (m->wh - ty - m->gappoh*oe - m->gappih*ie * (r - 1)) / r;
 			resize(c, m->wx + mw + m->gappov*oe, m->wy + ty, m->ww - mw - (2*c->bw) - 2*m->gappov*oe, h - (2*c->bw), 0);
-			ty += HEIGHT(c) + m->gappih*ie;
+			if (ty + HEIGHT(c) < m->wh)
+				ty += HEIGHT(c) + m->gappih*ie;
 		}
 }
 
