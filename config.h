@@ -63,6 +63,7 @@ static const Layout layouts[] = {
 
 /* key definitions */
 #define MODKEY Mod4Mask
+#define XK_NO_MOD 0
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -77,11 +78,9 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
 #include <X11/XF86keysym.h>
-
-#define XK_NO_MOD 0
 
 static Key keys[] = {
 	/* modifier                     key        		function        argument */
@@ -146,6 +145,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, 		focusmon,       { .i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  		tagmon,         { .i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, 		tagmon,         { .i = +1 } },
+	{ MODKEY,			XK_slash, 		spawn,          SHCMD("dwmmenu") },
 	TAGKEYS(                        XK_1,                      		0)
 	TAGKEYS(                        XK_2,                      		1)
 	TAGKEYS(                        XK_3,                      		2)
@@ -171,12 +171,12 @@ static Key keys[] = {
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 #ifndef __OpenBSD__
-	{ ClkWinTitle,		XK_NO_MOD,		Button2,	zoom,		{0} },
-	{ ClkStatusText,	XK_NO_MOD,		Button1,	sigdwmblocks,	{.i = 1} },
-	{ ClkStatusText,	XK_NO_MOD,		Button2,	sigdwmblocks,	{.i = 2} },
-	{ ClkStatusText,	XK_NO_MOD,		Button3,	sigdwmblocks,	{.i = 3} },
-	{ ClkStatusText,	XK_NO_MOD,		Button4,	sigdwmblocks,	{.i = 4} },
-	{ ClkStatusText,	XK_NO_MOD,		Button5,	sigdwmblocks,	{.i = 5} },
+	{ ClkWinTitle,		XK_NO_MOD,	Button2,	zoom,		{0} },
+	{ ClkStatusText,	XK_NO_MOD,	Button1,	sigdwmblocks,	{.i = 1} },
+	{ ClkStatusText,	XK_NO_MOD,	Button2,	sigdwmblocks,	{.i = 2} },
+	{ ClkStatusText,	XK_NO_MOD,	Button3,	sigdwmblocks,	{.i = 3} },
+	{ ClkStatusText,	XK_NO_MOD,	Button4,	sigdwmblocks,	{.i = 4} },
+	{ ClkStatusText,	XK_NO_MOD,	Button5,	sigdwmblocks,	{.i = 5} },
 	{ ClkStatusText,	ShiftMask,	Button1,	sigdwmblocks,	{.i = 6} },
 #endif
 	{ ClkStatusText,	ShiftMask,	Button3,	spawn,		SHCMD(TERMINAL " -e nvim ~/.local/src/dwmblocks/config.h ") },
@@ -193,7 +193,6 @@ static Button buttons[] = {
 	{ ClkTagBar,            XK_NO_MOD,              Button5,        shiftview,      {.i = 1} },*/
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
-	{ ClkRootWin,           XK_NO_MOD,              Button2,        togglebar,      {0} },
-
+	{ ClkRootWin,           XK_NO_MOD,      Button2,        togglebar,      {0} },
+	{ ClkRootWin,           XK_NO_MOD,      Button3,        spawn,		SHCMD("dwmmenu")},
 };
-
