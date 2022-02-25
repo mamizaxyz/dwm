@@ -9,7 +9,7 @@
 	{ MODKEY,			XK_Arabic_jeem,    	spawn,          SHCMD("xbacklight -dec 10") },
 	{ MODKEY|ShiftMask,		XK_Arabic_tcheh,    	spawn,          SHCMD("xbacklight -inc 25") },
 	{ MODKEY|ShiftMask,		XK_Arabic_jeem,    	spawn,          SHCMD("xbacklight -dec 25") },
-	{ MODKEY|ShiftMask,             XK_Arabic_tah,  	spawn,          SHCMD("setbg $HOME/.local/share/backgrounds") },
+	{ MODKEY|ShiftMask,             XK_Arabic_tah,  	spawn,          SHCMD("setbg $HOME/.local/share/wallpapers") },
 	{ MODKEY,             		XK_Arabic_ain,  	spawn,          SHCMD("dmenuunicode") },
 	{ MODKEY|ShiftMask,             XK_Arabic_dad,      	spawn,          SHCMD("sysact") },
 	{ MODKEY|ShiftMask,             XK_Arabic_ra,      	spawn,          SHCMD("vpntoggle") },
