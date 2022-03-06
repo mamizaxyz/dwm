@@ -164,6 +164,20 @@ static Key keys[] = {
 	{ XK_NO_MOD, XF86XK_Calculator,  	spawn,          	SHCMD("galculator") },
 	{ XK_NO_MOD, XF86XK_HomePage,  		spawn,          	SHCMD("thunar") },
 	#include "farsikeys.h"
+
+	/*
+	 * these keys are up for grabs
+	 * keep in mind that
+	 * you would also have to add the
+	 * equivalent in farsikeys.h
+	 *
+	 * Super + r|R
+	 * Super + y|Y
+	 * Super + ;|:
+	 * Super + '|"
+	 * Super + c|C
+	 * Super + n|N
+	 */
 };
 
 /* button definitions */
