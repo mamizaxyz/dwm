@@ -43,6 +43,7 @@ static const Rule rules[] = {
 	/* class      		instance    title       	tags mask     isfloating  isterminal  noswallow  monitor */
 	{ "Galculator", 	NULL,       NULL,       	0,            1,	  0,	      0,         -1 },
 	{ "TelegramDesktop", 	NULL,       NULL,       	0,            1,	  0,	      0,         -1 },
+	{ "Pavucontrol", 	NULL,       NULL,       	0,            1,	  0,	      0,         -1 },
 	{ TERMCLASS,		NULL,       NULL,     		0,            0,	  1,	      0,         -1 },
 	{ "st", 	        NULL,       NULL,       	0,            0,	  1,	      0,         -1 },
 	{ NULL, 		NULL,       "Event Tester",     0,            0,	  0,	      1,         -1 },
