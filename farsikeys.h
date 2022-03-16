@@ -3,6 +3,7 @@
 	/* modifier                     key        		function        argument */
 	{ MODKEY,                       XK_Farsi_yeh,      	spawn,          { .v = dmenucmd } },
 	{ MODKEY,             		XK_Arabic_theh,         spawn,          SHCMD("emacs") },
+	{ MODKEY,             		XK_Arabic_qaf,          spawn,          SHCMD(TERMINAL " -e lfub") },
 	{ MODKEY, 			XK_Arabic_sad,  	spawn,          SHCMD("$BROWSER") },
 	{ MODKEY|ShiftMask, 		XK_Arabic_peh,          spawn,          SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_Arabic_tcheh,    	spawn,          SHCMD("xbacklight -inc 10") },

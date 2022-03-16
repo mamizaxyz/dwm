@@ -88,6 +88,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      		spawn,          { .v = dmenucmd } },
 	{ MODKEY,             		XK_Return, 		spawn,          { .v = termcmd } },
 	{ MODKEY,             		XK_e, 		        spawn,          SHCMD("emacs") },
+	{ MODKEY,             		XK_r, 		        spawn,          SHCMD(TERMINAL " -e lfub") },
 	{ MODKEY, 			XK_w,  			spawn,          SHCMD("$BROWSER") },
 	{ MODKEY, 			XK_equal,   		spawn,          SHCMD("pamixer --allow-boost -i 5;  kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask, 		XK_equal,   		spawn,          SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
@@ -172,7 +173,7 @@ static Key keys[] = {
 	 * you would also have to add the
 	 * equivalent in farsikeys.h
 	 *
-	 * Super + r|R
+	 * Super + R
 	 * Super + y|Y
 	 * Super + ;|:
 	 * Super + '|"
