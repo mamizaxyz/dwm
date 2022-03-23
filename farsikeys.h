@@ -19,7 +19,7 @@
 	{ MODKEY,             		XK_Arabic_lam,      	spawn,          SHCMD("thunar") },
 	{ MODKEY|ShiftMask, 		XK_Arabic_sad,  	spawn,          SHCMD(TERMINAL " -e nmtui") },
 	{ MODKEY,             		0x100200d,  		togglescratch, 	{ .v = scratchpadcmd } },
-					/* key code in hex */
+					/* key code for (`) in hex  */
 	{ MODKEY,             		XK_Arabic_seen,  	togglesticky, 	{0} },
 	{ MODKEY,                       XK_Arabic_thal,      	togglebar,      {0} },
 	{ MODKEY,                       XK_Arabic_teh,      	focusstack,     {.i = +1 } },
