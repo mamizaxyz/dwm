@@ -17,6 +17,7 @@
 	{ MODKEY,             		XK_Arabic_ra,      	spawn,          SHCMD("virtualbox") },
 	{ MODKEY,             		XK_Arabic_khah,      	spawn,          SHCMD("obs") },
 	{ MODKEY,             		XK_Arabic_lam,      	spawn,          SHCMD("thunar") },
+	{ MODKEY|ShiftMask,             XK_Arabic_thal,      	spawn,		SHCMD("blueman-manager") },
 	{ MODKEY|ShiftMask, 		XK_Arabic_sad,  	spawn,          SHCMD(TERMINAL " -e nmtui") },
 	{ MODKEY,             		0x100200d,  		togglescratch, 	{ .v = scratchpadcmd } },
 					/* key code for (`) in hex  */
