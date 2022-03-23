@@ -45,6 +45,7 @@ static const Rule rules[] = {
 	{ "TelegramDesktop", 	NULL,       NULL,       	0,            1,	  0,	      0,         -1 },
 	{ "Pavucontrol", 	NULL,       NULL,       	0,            1,	  0,	      0,         -1 },
 	{ "Blueman-manager", 	NULL,       NULL,       	0,            1,	  0,	      0,         -1 },
+	{ "Lxpolkit",		NULL,       NULL,       	0,            1,	  0,	      0,         -1 },
 	{ TERMCLASS,		NULL,       NULL,     		0,            0,	  1,	      0,         -1 },
 	{ "st", 	        NULL,       NULL,       	0,            0,	  1,	      0,         -1 },
 	{ NULL, 		NULL,       "Event Tester",     0,            0,	  0,	      1,         -1 },
