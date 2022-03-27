@@ -105,7 +105,6 @@ static Key keys[] = {
 	{ ShiftMask, 			XK_Print,  		spawn,          SHCMD("scrot -s $HOME/pix/$(date '+%y%m%d-%H%M-%S').png") },
 	{ MODKEY|ShiftMask,             XK_x,  			spawn,          SHCMD("setbg    $HOME/.local/share/wallpapers") },
 	{ MODKEY|ShiftMask,             XK_slash, 		spawn,       	SHCMD("switchxkbmap; kill -49 $(pidof dwmblocks)") },
-	/*{ XK_NO_MOD,                    XK_Caps_Lock, 	        spawn,       	SHCMD("kill -45 $(pidof dwmblocks)") },*/
 	{ MODKEY,             		XK_u,  			spawn,          SHCMD("dmenuunicode") },
 	{ MODKEY,             		XK_backslash,  		spawn,          SHCMD("dmenuman") },
 	{ MODKEY,             		XK_BackSpace,  		spawn,          SHCMD("sysact") },
