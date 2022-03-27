@@ -181,7 +181,7 @@ static Key keys[] = {
 	 * Super + ;|:
 	 * Super + '|"
 	 * Super + c|C
-	 * Super + n|N
+	 * Super + N
 	 */
 };
 
