@@ -1,4 +1,5 @@
 #include <X11/XF86keysym.h>
+/* TODO: Add new keybindings to this file */
 
 	/* modifier                     key        		function        argument */
 	{ MODKEY,                       XK_Farsi_yeh,      	spawn,          { .v = dmenucmd } },

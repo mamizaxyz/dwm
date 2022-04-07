@@ -111,6 +111,7 @@ static Key keys[] = {
 	{ MODKEY,             		XK_BackSpace,  		spawn,          SHCMD("sysact") },
 	{ MODKEY|ShiftMask, 		XK_BackSpace,  		spawn,          SHCMD("sysact") },
 	{ MODKEY|ShiftMask,             XK_q,      		spawn,          SHCMD("sysact") },
+	{ MODKEY|ShiftMask,             XK_h,      		spawn,          SHCMD(TERMINAL " -e htop") },
 	{ MODKEY|ShiftMask,             XK_v,      		spawn,          SHCMD("vpntoggle") },
 	{ MODKEY,             		XK_v,      		spawn,          SHCMD("virtualbox") },
 	{ MODKEY,             		XK_o,      		spawn,          SHCMD("obs") },
