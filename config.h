@@ -113,6 +113,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      		spawn,          SHCMD("sysact") },
 	{ MODKEY|ShiftMask,             XK_h,      		spawn,          SHCMD(TERMINAL " -e htop") },
 	{ MODKEY|ShiftMask,             XK_v,      		spawn,          SHCMD("vpntoggle") },
+	{ MODKEY|ShiftMask,             XK_t,      		spawn,          SHCMD("telegram-desktop") },
 	{ MODKEY,             		XK_v,      		spawn,          SHCMD("virtualbox") },
 	{ MODKEY,             		XK_o,      		spawn,          SHCMD("obs") },
 	{ MODKEY,             		XK_g,      		spawn,          SHCMD("thunar") },
