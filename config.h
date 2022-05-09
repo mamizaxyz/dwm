@@ -92,6 +92,7 @@ static Key keys[] = {
 	{ MODKEY,             		XK_e, 		        spawn,          SHCMD("emacs") },
 	{ MODKEY,             		XK_r, 		        spawn,          SHCMD(TERMINAL " -e lfub") },
 	{ MODKEY, 			XK_w,  			spawn,          SHCMD("$BROWSER") },
+	{ MODKEY|ShiftMask, 		XK_i,  			spawn,          SHCMD("$BROWSER --incognito") },
 	{ MODKEY, 			XK_equal,   		spawn,          SHCMD("pamixer --allow-boost -i 5;  kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask, 		XK_equal,   		spawn,          SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY, 			XK_minus,   		spawn,          SHCMD("pamixer --allow-boost -d 5;  kill -44 $(pidof dwmblocks)") },
