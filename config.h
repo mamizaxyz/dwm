@@ -101,6 +101,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_bracketleft,    	spawn,          SHCMD("xbacklight -dec 10") },
 	{ MODKEY|ShiftMask,		XK_bracketright,    	spawn,          SHCMD("xbacklight -inc 25") },
 	{ MODKEY|ShiftMask,		XK_bracketleft,    	spawn,          SHCMD("xbacklight -dec 25") },
+	{ MODKEY|ShiftMask, 		XK_s,		  	spawn,          SHCMD("(synclient | grep 'TouchpadOff.*1' && synclient TouchpadOff=0) || synclient TouchpadOff=1") },
 	{ XK_NO_MOD, 			XK_Print,  		spawn,          SHCMD("scrot    ~/pix/$(date '+%y%m%d-%H%M-%S').png") },
 	{ ShiftMask, 			XK_Print,  		spawn,          SHCMD("scrot -s ~/pix/$(date '+%y%m%d-%H%M-%S').png") },
 	{ MODKEY|ShiftMask,		XK_x,  			spawn,          SHCMD("setbg    ~/.local/share/wallpapers") },
