@@ -231,4 +231,6 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 	{ ClkRootWin,           XK_NO_MOD,      Button2,        togglebar,      {0} },
 	{ ClkRootWin,           XK_NO_MOD,      Button3,        spawn,		SHCMD("dwmmenu")},
+	{ ClkRootWin,           XK_NO_MOD,      8,        	viewprev,	{0}},
+	{ ClkRootWin,           XK_NO_MOD,      9,        	viewnext,	{0}},
 };
