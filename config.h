@@ -66,6 +66,7 @@ static const Layout layouts[] = {
 
 /* key definitions */
 #define MODKEY Mod4Mask
+#define AltMask Mod1Mask
 #define XK_NO_MOD 0
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
@@ -111,6 +112,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_slash, 		spawn,       	SHCMD("switchxkbmap; kill -49 $(pidof dwmblocks)") },
 	{ MODKEY,             		XK_u,  			spawn,          SHCMD("dmenuunicode") },
 	{ MODKEY,             		XK_backslash,  		spawn,          SHCMD("dmenuman") },
+	{ MODKEY|AltMask,   		XK_i,	  		spawn,          SHCMD("dmenumount") },
+	{ MODKEY|AltMask,		XK_o,  			spawn,          SHCMD("dmenuumount") },
 	{ MODKEY,             		XK_BackSpace,  		spawn,          SHCMD("sysact") },
 	{ MODKEY|ShiftMask, 		XK_BackSpace,  		spawn,          SHCMD("sysact") },
 	{ MODKEY|ShiftMask,             XK_q,      		spawn,          SHCMD("sysact") },
