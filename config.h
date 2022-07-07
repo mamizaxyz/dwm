@@ -20,7 +20,7 @@ static const unsigned int systrayspacing	= 2;        /* systray spacing */
 static const int systraypinningfailfirst	= 1;        /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray			= 1;	    /* 0 means no systray */
 static const int topbar            		= 1;        /* 0 means bottom bar */
-static const char *fonts[]          		= { "Mononoki:size=10", "Vazirmatn:size=10", "JoyPixels:pixelsize=14:antialias=true:autohint=true" };
+static const char *fonts[]          		= { "Fira Code:size=10", "Vazirmatn:size=10", "JoyPixels:pixelsize=14:antialias=true:autohint=true" };
 static const char col_gray1[]       		= "#282c34";
 static const char col_gray2[]       		= "#1a1a1a";
 static const char col_gray3[]       		= "#f8f8f2";
