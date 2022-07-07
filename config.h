@@ -121,7 +121,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_r,      		spawn,          SHCMD("terminator -e newsboat") },
 	{ MODKEY|ShiftMask,             XK_v,      		spawn,          SHCMD("vpntoggle") },
 	{ MODKEY|ShiftMask,             XK_t,      		spawn,          SHCMD("telegram-desktop") },
-	{ MODKEY,             		XK_v,      		spawn,          SHCMD("virtualbox") },
+	{ MODKEY,             		XK_v,      		spawn,          SHCMD("virt-manager") },
 	{ MODKEY,             		XK_o,      		spawn,          SHCMD("obs") },
 	{ MODKEY,             		XK_g,      		spawn,          SHCMD("thunar") },
 	{ MODKEY|ShiftMask,		XK_b,      		spawn,          SHCMD("blueman-manager") },
